@@ -2,6 +2,7 @@ package com.example.community.member.entity;
 
 import com.example.community.company.entity.CompanyLocation;
 import com.example.community.company.entity.CompanyType;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 @Entity

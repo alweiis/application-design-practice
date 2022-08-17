@@ -49,11 +49,8 @@ public class MemberController {
             members = memberService.findMembers();
         }
 
-        List<MemberResponseDto> response =
-                members.stream()
-                        .map(member -> mapper.memberToMemberResponseDto(member))
-                        .collect(Collectors.toList());
-        return new ResponseEntity<>(response, HttpStatus.OK);
+        List<MemberResponseDto> responses = mapper.membersToMemberResponseDto(members);
+        return new ResponseEntity<>(responses, HttpStatus.OK);
     }
 
 }
